@@ -5,34 +5,41 @@
   <meta name='viewport' content='width=device-width,initial-scale=1.0'>
   <meta charset='utf-8'>
   <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
-  <!-- Start WOW Slider.com HEAD section -->
-  <link rel="stylesheet" type="text/css" href="engine1/style.css" />
-  <script type="text/javascript" src="engine1/jquery.js"></script>
-  <!-- End WOW Slider.com HEAD section -->
+  <!-- jQuery library (served from Google) -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <!-- bxSlider Javascript file -->
+  <script src="js/jquery.bxslider.min.js"></script>
+  <!-- bxSlider CSS file -->
+  <link href="js/jquery.bxslider.css" rel="stylesheet" />
+  <style type="text/css">
+	.slideshow {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	.slideshow ul {
+		margin:0;
+	}
+	img{
+	  width:60%;
+	  height:50%;
+	}
+  </style>
 </head>
 <body>
-  <!-- Start WOW Slider.com BODY section -->
-  <div id="wowslider-container1">
-  <div class="ws_images">
-    <ul>
-	  <li><img src="images/rabbit.jpeg" alt="" title="Swallowtail butterfly" id="wows1_0"/></li>
-	  <li><img src="images/dog.jpeg" alt="" title="Dragonfly" id="wows1_1"/></li>
-	  <li><img src="images/dogrun.jpeg" alt="" title="Hover fly" id="wows1_2"/></li>
-    </ul>
+  <div class="slideshow">
+	<ul class="bxslider">
+		<li><img src="images/dog.jpeg" /></li>
+		<li><img src="images/rabbit.jpeg" /></li>
+		<li><img src="images/dogrun.jpeg" /></li>
+	</ul>
   </div>
-  <div class="ws_bullets">
-    <div>
-	  <a href="#" title="Swallowtail butterfly"><span><img src="data1/tooltips/swallowtailbutterfly364329_1280.jpg" alt="Swallowtail butterfly"/></span></a>
-	  <a href="#" title="Dragonfly"><span><img src="data1/tooltips/dragonfly348433_1280.jpg" alt="Dragonfly"/></span></a>
-	  <a href="#" title="Hover fly"><span><img src="data1/tooltips/hoverfly61682_1280.jpg" alt="Hover fly"/></span></a>
-    </div>
-  </div>
-  <div class="ws_shadow"></div>
-  </div>
-
-  <script type="text/javascript" src="engine1/wowslider.js"></script>
-  <script type="text/javascript" src="engine1/script.js"></script>
-  <!-- End WOW Slider.com BODY section -->
+  <script type="text/javascript">
+	$(document).ready(function(){
+	  $('.bxslider').bxSlider({
+		mode: 'fade'
+		});
+	});
+  </script>
 
 </body>
 </html>
